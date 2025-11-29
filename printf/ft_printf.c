@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:00:14 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 01:59:55 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 02:10:45 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,34 @@ int	ft_printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '%')
-                count += ft_printf_%(void);
+				count += ft_printf_(void);
 			else if (format[i] == 'c')
-                count += ft_printf_c(va_arg(ap, char));
+				count += ft_printf_c(va_arg(ap, char));
 			else if (format[i] == 'd')
-                count += ft_printf_d(va_arg(ap, int));
+				count += ft_printf_d(va_arg(ap, int));
 			else if (format[i] == 'i')
-                count += ft_printf_i(va_arg(ap, int));
+				count += ft_printf_i(va_arg(ap, int));
 			else if (format[i] == 'p')
-                count += ft_printf_p(va_arg(ap, void*));
+				count += ft_printf_p(va_arg(ap, void *));
 			else if (format[i] == 's')
-                count += ft_printf_s(va_arg(ap, char*));
+				count += ft_printf_s(va_arg(ap, char *));
 			else if (format[i] == 'u')
-                count += ft_printf_u(va_arg(ap, unsigned int));
+				count += ft_printf_u(va_arg(ap, unsigned int));
 			else if (format[i] == 'x')
-                count += ft_printf_x(va_arg(ap, int));
+				count += ft_printf_x(va_arg(ap, int));
 			else if (format[i] == 'X')
-                count += ft_printf_X(va_arg(ap, int));
+				count += ft_printf_X(va_arg(ap, int));
 			else
-                return (-1);
-            i++;
+				return (-1);
+			i++;
 		}
-        else
-        {
-            ft_putchar(format[i]);
-            i++;
-            count++;
-        }
+		else
+		{
+			ft_putchar(format[i]);
+			i++;
+			count++;
+		}
 	}
+	va_end(ap);
+	return (count);
 }

@@ -6,8 +6,12 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:33 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 01:02:34 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 02:08:00 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_printf_i(va_arg(ap, int))
+{
+}

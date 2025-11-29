@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 04:02:09 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 01:07:44 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 02:01:11 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ void	ft_putnbr_fd(int n, int fd);
 
 /* printf */
 int		ft_printf(const char *, ...);
+
 
 #endif
