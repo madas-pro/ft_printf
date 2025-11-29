@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 04:02:09 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/26 16:33:14 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 01:07:44 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <strarg.h>
 # include <unistd.h>
 
 int		ft_isdigit(int c);
@@ -71,5 +72,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+/* printf */
+int		ft_printf(const char *, ...);
 
 #endif
