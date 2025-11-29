@@ -6,12 +6,14 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:40 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 02:07:19 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 02:14:21 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_printf_c(va_arg(ap, char))
+int	ft_printf_c(char c)
 {
+    ft_putchar_fd(c, 1);
+    return(1);
 }

@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:00:14 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 02:10:45 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 02:24:57 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,8 @@ int	ft_printf(const char *format, ...)
 				count += ft_printf_(void);
 			else if (format[i] == 'c')
 				count += ft_printf_c(va_arg(ap, char));
-			else if (format[i] == 'd')
+			else if (format[i] == 'd' || format[i] == 'i')
 				count += ft_printf_d(va_arg(ap, int));
-			else if (format[i] == 'i')
-				count += ft_printf_i(va_arg(ap, int));
 			else if (format[i] == 'p')
 				count += ft_printf_p(va_arg(ap, void *));
 			else if (format[i] == 's')
@@ -52,7 +50,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			ft_putchar(format[i]);
+			ft_putchar_fd(format[i]);
 			i++;
 			count++;
 		}

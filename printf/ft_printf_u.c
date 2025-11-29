@@ -6,12 +6,14 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:18 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 02:08:41 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/29 02:28:21 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_printf_u(va_arg(ap, unsigned int))
+int	ft_printf_u(unsigned int d)
 {
+    ft_putnbr_fd(d, 1);
+    return (ft_count_nbr(d));
 }
