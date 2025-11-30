@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:00:14 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/30 14:34:05 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/30 16:08:04 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	ap;
 
+	if (!format)
+		return (-1);
 	i = 0;
 	count = 0;
 	va_start(ap, format);

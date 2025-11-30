@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:15 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/30 14:37:53 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/30 16:02:27 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,9 @@ int	ft_printf_x(int nbr, int is_x_maj)
 		count++;
 		nbr = -nbr;
 	}
-	while (nbr >= 16)
-	{
-		nbr = nbr / 16;
-		ft_putchar_fd(base[nbr % 16], 1);
-		count++;
-	}
+	if (nbr >= 16)
+		ft_printf_x(nbr / 16, is_x_maj);
+	ft_putchar_fd(base[nbr % 16], 1);
+	count++;
 	return (count + 1);
 }
