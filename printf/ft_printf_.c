@@ -6,14 +6,14 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:44 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 02:13:34 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/30 14:38:06 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_printf_(void)
+int	ft_printf_(void)
 {
-    ft_putchar_fd('%', 1);
-    return(1);
+	ft_putchar_fd('%', 1);
+	return (1);
 }

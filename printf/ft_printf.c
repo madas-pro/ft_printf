@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:00:14 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 02:24:57 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/30 14:34:05 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	ft_printf(const char *format, ...)
 			else if (format[i] == 'u')
 				count += ft_printf_u(va_arg(ap, unsigned int));
 			else if (format[i] == 'x')
-				count += ft_printf_x(va_arg(ap, int));
+				count += ft_printf_x(va_arg(ap, int), 0);
 			else if (format[i] == 'X')
-				count += ft_printf_X(va_arg(ap, int));
+				count += ft_printf_x(va_arg(ap, int), 1);
 			else
 				return (-1);
 			i++;

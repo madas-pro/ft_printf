@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:40 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/29 02:14:21 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/11/30 14:38:32 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_printf_c(char c)
 {
-    ft_putchar_fd(c, 1);
-    return(1);
+	ft_putchar_fd(c, 1);
+	return (1);
 }
