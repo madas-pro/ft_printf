@@ -6,7 +6,7 @@
 #    By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/21 06:26:04 by adolivie          #+#    #+#              #
-#    Updated: 2025/11/25 11:10:08 by adolivie         ###   ########.fr        #
+#    Updated: 2025/11/30 16:32:14 by adolivie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,15 @@ SRC			=	ft_isdigit.c \
 				ft_putchar_fd.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
-				ft_putnbr_fd.c
+				ft_putnbr_fd.c \
+				ft_printf.c \
+                ft_printf_.c \
+                ft_printf_c.c \
+                ft_printf_d.c \
+                ft_printf_p.c \
+                ft_printf_s.c \
+                ft_printf_u.c \
+                ft_printf_x.c \
 
 OBJ			= $(SRC:.c=.o)
 

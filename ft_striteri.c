@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_s.c                                      :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/29 01:02:21 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/30 14:38:38 by adolivie         ###   ########.fr       */
+/*   Created: 2025/11/21 03:27:54 by adolivie          #+#    #+#             */
+/*   Updated: 2025/11/26 16:55:05 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-int	ft_printf_s(char *str)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	ft_putstr_fd(str);
-	return (ft_strlen(str));
+	unsigned int	i;
+
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
+
+// int	main(void)
+// {
+// 	char str[] = "Abcdef";
+// 	ft_striteri(str, ft_oupper);
+// 	printf("%s\n", str);
+// 	return (0);
+// }

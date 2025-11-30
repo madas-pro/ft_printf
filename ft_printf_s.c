@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_c.c                                      :+:      :+:    :+:   */
+/*   ft_printf_s.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/29 01:02:40 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/30 14:38:32 by adolivie         ###   ########.fr       */
+/*   Created: 2025/11/29 01:02:21 by adolivie          #+#    #+#             */
+/*   Updated: 2025/11/30 16:44:32 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_printf_c(char c)
+int	ft_printf_s(char *str)
 {
-	ft_putchar_fd(c, 1);
-	return (1);
+	ft_putstr_fd(str, 1);
+	return (ft_strlen(str));
 }
