@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:36 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/02 12:38:11 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/02 13:03:44 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ static int	ft_count_nbr(int nbr)
 	int	count;
 
 	count = 0;
-	if (nbr < 0)
+	if (nbr == -2147483648)
+		return (count + 11);
+	else if (nbr < 0)
 	{
 		count++;
 		nbr = -nbr;
