@@ -6,11 +6,11 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 23:01:07 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/21 06:22:04 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:38:29 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:36 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/30 16:00:50 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:38:11 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_count_nbr(int nbr)
 {

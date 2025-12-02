@@ -6,11 +6,11 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:21 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/30 16:44:32 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:38:07 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_printf_s(char *str)
 {

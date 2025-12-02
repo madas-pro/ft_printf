@@ -6,12 +6,12 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 01:08:03 by adolivie          #+#    #+#             */
-/*   Updated: 2025/11/26 16:52:10 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:37:46 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libft.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
