@@ -6,59 +6,58 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:00:14 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/02 13:02:00 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/04 13:47:08 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_handle_format(char c, va_list ap, int *count)
+{
+	if (c == '%')
+		*count += ft_printf_();
+	else if (c == 'c')
+		*count += ft_printf_c(va_arg(ap, int));
+	else if (c == 'd' || c == 'i')
+		*count += ft_printf_d(va_arg(ap, int));
+	else if (c == 'p')
+		*count += ft_printf_p(va_arg(ap, void *));
+	else if (c == 's')
+		*count += ft_printf_s(va_arg(ap, char *));
+	else if (c == 'u')
+		*count += ft_printf_u(va_arg(ap, unsigned int));
+	else if (c == 'x')
+		*count += ft_printf_x(va_arg(ap, int), 0);
+	else if (c == 'X')
+		*count += ft_printf_x(va_arg(ap, int), 1);
+	else
+		return (-1);
+	return (0);
+}
+
 int	ft_printf(const char *format, ...)
 {
-	int		i;
-	int		len;
-	int		count;
 	va_list	ap;
+	int		i;
+	int		count;
 
 	if (!format)
 		return (-1);
+	va_start(ap, format);
 	i = 0;
 	count = 0;
-	va_start(ap, format);
-	len = ft_strlen(format);
-	while (i < len)
+	while (format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1])
 		{
 			i++;
-			if (format[i] == '%')
-				count += ft_printf_();
-			else if (format[i] == 'c')
-				count += ft_printf_c(va_arg(ap, int));
-			else if (format[i] == 'd' || format[i] == 'i')
-				count += ft_printf_d(va_arg(ap, int));
-			else if (format[i] == 'p')
-				count += ft_printf_p(va_arg(ap, void *));
-			else if (format[i] == 's')
-				count += ft_printf_s(va_arg(ap, char *));
-			else if (format[i] == 'u')
-				count += ft_printf_u(va_arg(ap, unsigned int));
-			else if (format[i] == 'x')
-				count += ft_printf_x(va_arg(ap, int), 0);
-			else if (format[i] == 'X')
-				count += ft_printf_x(va_arg(ap, int), 1);
-			else
-				return (-1);
-			i++;
+			if (ft_handle_format(format[i], ap, &count) == -1)
+				return (va_end(ap), -1);
 		}
 		else
-		{
-			ft_putchar_fd(format[i], 1);
-			i++;
-			count++;
-		}
+			count += ft_printf_c(format[i]);
+		i++;
 	}
 	va_end(ap);
 	return (count);
 }
-
-
