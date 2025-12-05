@@ -6,34 +6,32 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:36 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/02 13:03:44 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/05 10:53:02 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_count_nbr(int nbr)
+int	ft_printf_d(int n)
 {
 	int	count;
 
 	count = 0;
-	if (nbr == -2147483648)
-		return (count + 11);
-	else if (nbr < 0)
+	if (n == -2147483648)
 	{
-		count++;
-		nbr = -nbr;
+		count = write(1, "-2147483648", 11);
+		return (count);
 	}
-	while (nbr >= 10)
+	if (n < 0)
 	{
-		nbr = nbr / 10;
-		count++;
+		count = write(1, "-", 1);
+		n = -n;
 	}
-	return (count + 1);
-}
-
-int	ft_printf_d(int d)
-{
-	ft_putnbr_fd(d, 1);
-	return (ft_count_nbr(d));
+	if (n >= 10)
+	{
+		count += ft_printf_d(n / 10);
+	}
+	ft_putchar_fd(n % 10 + '0', 1);
+	count += 1;
+	return (count);
 }

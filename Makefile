@@ -6,7 +6,7 @@
 #    By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/21 06:26:04 by adolivie          #+#    #+#              #
-#    Updated: 2025/12/02 12:39:09 by adolivie         ###   ########.fr        #
+#    Updated: 2025/12/05 10:42:35 by adolivie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,6 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC			=	ft_putchar_fd.c \
-				ft_putstr_fd.c \
-				ft_putnbr_fd.c \
 				ft_printf.c \
                 ft_printf_.c \
                 ft_printf_c.c \

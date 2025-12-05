@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:21 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/04 13:11:36 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/05 10:44:06 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 
 int	ft_printf_s(char *str)
 {
-	ft_putstr_fd(str, 1);
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (write(1, "(null)", 6));
+	while (str[i])
+	{
+		write(1, str + i, 1);
+		i++;
+	}
 	return (ft_strlen(str));
 }
