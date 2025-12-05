@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:24 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/02 12:38:09 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/05 11:10:45 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,31 +19,23 @@ static int	ft_conv_x(int nbr)
 
 	count = 0;
 	base = "0123456789abcdef";
-	if (nbr < 0)
-	{
-		count++;
-		nbr = -nbr;
-	}
 	if (nbr >= 16)
-		ft_conv_x(nbr / 16);
+		count += ft_conv_x(nbr / 16);
 	ft_putchar_fd(base[nbr % 16], 1);
 	count++;
-	return (count + 1);
+	return (count);
 }
 
 int	ft_printf_p(void *ptr)
 {
-	int		count;
-	size_t	adr;
+	int				count;
+	unsigned long	adr;
 
 	count = 0;
-	if (ptr == NULL)
-	{
-		count = ft_printf_s("(nil)");
-		return (count);
-	}
-	adr = (size_t)ptr;
-	count = ft_printf_s("0x");
+	if (!ptr)
+		return (write(1, "(nil)", 5));
+	adr = (unsigned long)ptr;
+	count += write(1, "0x", 2);
 	count += ft_conv_x(adr);
 	return (count);
 }
