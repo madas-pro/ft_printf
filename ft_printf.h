@@ -6,7 +6,7 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 04:02:09 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/05 10:42:40 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:31:26 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int		ft_printf_d(int d);
 int		ft_printf_p(void *ptr);
 int		ft_printf_s(char *str);
 int		ft_printf_u(unsigned int d);
-int		ft_printf_x(int nbr, int is_x_maj);
+int		ft_printf_x(unsigned int nbr, int is_x_maj);
 
 #endif

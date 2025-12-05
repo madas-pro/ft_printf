@@ -6,13 +6,13 @@
 /*   By: adolivie <adolivie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 01:02:24 by adolivie          #+#    #+#             */
-/*   Updated: 2025/12/05 11:10:45 by adolivie         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:35:23 by adolivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_conv_x(int nbr)
+static int	ft_conv_x(unsigned long nbr)
 {
 	int		count;
 	char	*base;
